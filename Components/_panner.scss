@@ -1,16 +1,59 @@
 .panner{
-    width: 100%;
+  width: 100%;
+  padding-top: 10px;
 }
+
 .card{
     width: 100%;
-    height: 300px;
-    box-shadow: 1px 1px 20px 1px rgba(0,0,0,0.19);
-    background-color: red;
+    height: 100%;
+    box-shadow: 1px 1px 20px 1px rgba(0,0,0, 0.19);
+  margin-bottom: 10px;
+    .text{
+        text-align: center;
+        height: 50%;
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .img{
+        height: 50%;
+    }
 }
-.img{
-    height: 50%;
-    width: 100%;
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
-.text{
-    @extend .img;
+
+.xasan{
+    box-shadow: 1px 1px 20px 1px rgba(0,0,0, 0.19);
+    height: 140px;
+    display: flex;
+}
+.xasan:nth-child(1){
+    flex: 2 60%;
+    order: 1;
+}
+.xasan:nth-child(2){
+    flex: 1 38%;
+    order: 2;
+}
+.xasan:nth-child(3){
+    flex-grow: 1;
+    order: 3;
+}
+.sawir{
+    width: 40%;
+    height: 100%;
+    background-image: url(/images/1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.qoraal{
+    height: 100%;
+    width: 60%;
+    text-align: left;
+    padding: 20px;
 }
