@@ -1,0 +1,67 @@
+@import "./Topography/colors";
+@import "./flex";
+@import "./global";
+@import "./responsive";
+
+.header{
+    position: relative;
+    padding: 0 50px;
+    background-color: $headerBg;
+    width: 100%;
+    height: 60px;
+    @include  j-c-flex;
+    color: $textColor;
+
+    a{
+        display: block;
+        color: $textColor;
+        padding: 10px;
+        text-transform: uppercase;
+        font-family: 'Acme', sans-serif;
+    }
+    a:hover{
+        color: rgb(209, 193, 193);
+        border-bottom: 3px solid gray;
+    }
+
+    .navbar ul{
+      display: flex;
+    }
+    .logo{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 30px;
+    }
+
+    .search{
+        border: 1px solid black;
+        background-color: whitesmoke;
+        height: 40px;
+    }
+    button{
+        background-color: transparent;
+        padding: 4px;
+        border: none;
+        height: 100%;
+        font-size: 18px;
+        outline: none;
+        padding-right: 15px;
+    }
+    input{
+        padding-left: 10px;
+        @extend button;
+        width: 160px;
+
+}
+
+}
+.mobil__menu{
+    @include mobilMenu(sm){
+      display: none;
+    }
+}
+
+.normalMenu{
+    @include normalMenu(sm){
+        display: none;
+    }
+}

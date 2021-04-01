@@ -1,0 +1,14 @@
+$mobilMenu: ("sm": 726px, "m": 900px, "x": 1200px);
+
+
+@mixin mobilMenu($size) {
+    @media screen and (max-width: map-get($mobilMenu , $size )){
+        @content;
+    }
+}
+
+@mixin normalMenu($size) {
+    @media screen and (min-width: map-get($mobilMenu , $size )){
+        @content;
+    }
+}
